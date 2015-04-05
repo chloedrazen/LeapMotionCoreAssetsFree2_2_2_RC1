@@ -25,13 +25,5 @@ public class HitTarget : MonoBehaviour {
 			print ("score!trigger");
 		}
 	}
-	void OnCollisionEnter(Collision collision) {
-		
-		if (collision.gameObject.tag == "SpecialCube") {
-			score ++;
-			Destroy (collision.gameObject);
-			print ("score!colllision");
-		}
-		
-	}
+
 }
