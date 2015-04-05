@@ -3,10 +3,11 @@ using System.Collections;
 
 public class BlackHole : MonoBehaviour {
 	public bool gameOver = false;
+	public ParticleSystem particleSys;
 
 	// Use this for initialization
 	void Start () {
-	
+		//particleSys.gameObject.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -19,8 +20,10 @@ public class BlackHole : MonoBehaviour {
 			gameOver = true;
 			print ("GAME OVER!!!!");
 		}
-		if (collision.gameObject.tag != "Generating")
-			Destroy (collision.gameObject);
+//		if (collision.gameObject.tag != "Generating")
+		particleSys.Play ();
+		Destroy (collision.gameObject);
+		print ("Destroyed object");
 		
 	}
 }

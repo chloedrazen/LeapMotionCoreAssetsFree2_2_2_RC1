@@ -5,8 +5,7 @@ public class HitBlackHole : MonoBehaviour {
 		//public int score = 0;
 		// Use this for initialization
 	void Start () {
-			
-		}
+	}
 		
 		//Update is called once per frame
 		void Update () {
@@ -20,23 +19,9 @@ public class HitBlackHole : MonoBehaviour {
 		void OnTriggerEnter(Collider other)
 			{
 				Rigidbody rb = other.attachedRigidbody;
-				Vector3 force = new Vector3 (0,-1000,0);
+				Vector3 force = new Vector3 (0,-3000,0);
 				rb.AddForce ( force );
 				print ("hit BLACK HOLE");
 			}
 
-			//if (other.tag == "SpecialCube") {
-			//	score ++;
-			//	Destroy (other.gameObject);
-			//	print ("score!trigger");
-			//}
-	//	}
-	///	void OnCollisionEnter(Collision collision) {
-	///		if (collision.gameObject.tag == "SpecialCube") {
-		//		score ++;
-		//		Destroy (collision.gameObject);
-		//		print ("score!colllision");
-		//	}
-			
-		//}
 	}

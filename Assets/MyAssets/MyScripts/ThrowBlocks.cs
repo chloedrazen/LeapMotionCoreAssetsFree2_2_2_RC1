@@ -25,7 +25,7 @@ public class ThrowBlocks : MonoBehaviour {
 			play = true;
 		}
 		if (play) {
-			print (Time.deltaTime);
+			//print (Time.deltaTime);
 			//enumm += Time.deltaTime;
 			enumm ++;
 		
