@@ -35,7 +35,7 @@ public class ThrowBlocks : MonoBehaviour {
 
 		Rigidbody cubeClone;
 		Vector3 startPos = new Vector3 (cube.transform.position.x, 5.39f, cube.transform.position.z);
-		cubeClone = Instantiate (cube.rigidbody, startPos ,cube.transform.rotation) as Rigidbody;
+		cubeClone = Instantiate (cube.GetComponent<Rigidbody>(), startPos ,cube.transform.rotation) as Rigidbody;
 
 		cubeClone.useGravity = false;
 	
