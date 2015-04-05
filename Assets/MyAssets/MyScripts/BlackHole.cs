@@ -19,7 +19,8 @@ public class BlackHole : MonoBehaviour {
 			gameOver = true;
 			print ("GAME OVER!!!!");
 		}
-		Destroy (collision.gameObject);
+		if (collision.gameObject.tag != "Generating")
+			Destroy (collision.gameObject);
 		
 	}
 }

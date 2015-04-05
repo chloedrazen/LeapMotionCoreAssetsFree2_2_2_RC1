@@ -8,6 +8,7 @@ public class ThrowBlocks : MonoBehaviour {
 	public Rigidbody cube;
 	public int frequency = 20;
 	public float count = 0;
+	bool play = false; 
 	//public static Object Instantiate(Object cube);
 
 	// Use this for initialization
@@ -19,8 +20,11 @@ public class ThrowBlocks : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		count += Time.deltaTime;
-		print (count);
+//		print (count);
 		if (count > 3.0f) {
+			play = true;
+		}
+		if (play) {
 			print (Time.deltaTime);
 			//enumm += Time.deltaTime;
 			enumm ++;
@@ -29,6 +33,7 @@ public class ThrowBlocks : MonoBehaviour {
 			if (enumm % frequency == 0)
 				makeCubes ();
 		}
+
 
 	}
 	void makeCubes(){
