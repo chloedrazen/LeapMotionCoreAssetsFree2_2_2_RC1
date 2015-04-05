@@ -4,9 +4,10 @@ using System.Collections;
 public class HitTarget : MonoBehaviour {
 
 	public int score = 0;
+	AudioSource audsource;
 	// Use this for initialization
 	void Start () {
-	
+		audsource = GetComponent<AudioSource> ();
 	}
 	
 	//Update is called once per frame
@@ -23,6 +24,7 @@ public class HitTarget : MonoBehaviour {
 			score ++;
 			Destroy (other.gameObject);
 			print ("score!trigger");
+			audsource.Play();
 		}
 	}
 

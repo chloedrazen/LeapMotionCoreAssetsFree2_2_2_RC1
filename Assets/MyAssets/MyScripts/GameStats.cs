@@ -25,7 +25,11 @@ public class GameStats : MonoBehaviour {
 			youLose = true;
 			//Losing screen
 		}
-
 	
 	}
+	void removePoints()
+	{
+		score -= 20;
+	}
+
 }

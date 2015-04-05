@@ -9,12 +9,7 @@ public class HitBlackHole : MonoBehaviour {
 		
 		//Update is called once per frame
 		void Update () {
-			//		Vector3 target = targetPoint.position;
-			//		Vector3 distance = target - transform.position;
-			//		if (Vector3.Distance (target, transform.position) < 0.2f){
-			//			score++;
-			//			print ("Score: ", score);
-			
+						
 		}
 		void OnTriggerEnter(Collider other)
 			{
